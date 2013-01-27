@@ -26,8 +26,11 @@ gem 'jquery-rails'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 
+<<<<<<< HEAD
 gem "paperclip", "~> 3.0"
 
+=======
+>>>>>>> 145515ad5be300a74780032cd7a556c10221171e
 #user login
 gem "sorcery"
 
