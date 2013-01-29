@@ -4,9 +4,11 @@ class RunnersController < ApplicationController
   def index
     @runners = Runner.all
 
+    @runner_groups = @runners.each_slice(4).to_a
+
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @runners }
+      format.json { render json: @runner_groups }
     end
   end
 

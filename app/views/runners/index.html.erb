@@ -1,18 +1,17 @@
 <h1>The gRunner Team</h1>
 
-<ul>
-<% @runners.each do |runner| %>
-  <li>
-    <!--
-    <li><%= link_to 'Show', runner %></li>
-    <li><%= link_to 'Edit', edit_runner_path(runner) %></li>
-    <li><%= link_to 'Destroy', runner, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-    -->
-    <%= link_to ( image_tag runner.photo.url(:thumb) ), runner %> <br />
-    <%= runner.name %>
-  </li>
-<% end %>
-</ul>
+<table>
+  <% @runner_groups.each do |group| %>
+    <tr>
+      <% group.each do |runner| %>
+        <td>
+          <%= link_to ( image_tag runner.photo.url(:thumb) ), runner %> <br />
+          <%= runner.name %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
 
 <br />
 
